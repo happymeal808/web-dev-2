@@ -1,7 +1,6 @@
 @use 'vars' as *;
 
 body {
-    background-image: url('images/bg.jpg');
-    background-attachment:fixed;
-    background-size:auto;
+    background-image: url('../images/bg.jpg');
+    background-repeat:repeat;
 }

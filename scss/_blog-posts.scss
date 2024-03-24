@@ -2,4 +2,8 @@
 
 .blog-posts {
     background-color: $heading-1-background;
+
+    h3 {
+        font-family: $heading-font;
+    }
 }
