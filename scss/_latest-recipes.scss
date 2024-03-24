@@ -1,1 +1,35 @@
 @use 'vars' as *;
+
+.latest-recipes{
+    background-color: $section-background;
+    margin: 0 0.75rem 1rem 0.75rem;
+    max-height: fit-content;
+    h2 {
+        font-family: $heading-font;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0;
+        padding:0.5rem;
+        background-color: $footer-background;
+        color: $header-font-color;
+    };
+    p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.5rem;
+        margin: 0;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 400;
+
+        img{
+            border: 2px solid $footer-background;
+            margin-right: 0.5rem;
+        }
+    }
+    p:nth-child(odd){
+        background-color: $odd-child-background;
+    };
+}
