@@ -1,1 +1,7 @@
 @use 'vars' as *;
+
+.blog-posts{
+    background-color: $section-background;
+    margin: 0 1rem;
+    padding: 0 1rem;
+}

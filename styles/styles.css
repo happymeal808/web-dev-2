@@ -331,4 +331,15 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-image: url(../images/bg.jpg);
+  background-repeat: repeat;
+}
+
+.blog-posts {
+  background-color: #FFFFFF;
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
