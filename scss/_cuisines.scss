@@ -18,6 +18,9 @@
 
     .list-wrap{
         ul{
+            font-family: $body-font;
+            font-size: 1rem;
+            font-weight: 500;
             display: flex;
             flex-wrap: wrap;
             list-style: none;
@@ -27,20 +30,59 @@
 
             li {
                 width: 50%;
-                display: flex;
-                justify-content: flex-start;
+                text-align: justify;
 
                 a {
-                    font-family: $body-font;
-                    font-size: clamp(1rem, 2vw, 1.5rem);
-                    font-weight: 500;
                     color: black;
                     text-decoration: none;
                     line-height: 1.5;
-
                 }
             
             }
         }
     }
+};
+// lARGE PHONES
+@media (min-width:21em){
+        
+};
+
+// SMALL TABS
+@media (min-width:31em){
+    .cuisines {
+        .list-wrap{
+            ul{
+                width: 75%;
+                li { 
+                    width: 30%;
+                }
+            };
+        };
+    };
+};
+
+// LARGE TABS
+@media (min-width:42em){
+        
+};
+
+// DESKTOP
+@media (min-width:50em){
+    .cuisines {
+        .list-wrap{
+            ul{
+                flex-direction: column;
+                width: fit-content;
+                height: max-content;
+                li {
+                    width: 100%;
+                    a{
+                        display: flex;     
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
 }
+    

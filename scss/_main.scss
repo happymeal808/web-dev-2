@@ -3,4 +3,30 @@
 body{
     background-image: url(../images/bg.jpg);
     background-repeat: repeat;
+    background-position: top;
 }
+
+// DESKTOP
+@media (min-width:50em){
+    body{
+        .site-main{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 50em;
+            position: relative;
+
+            .col-left{
+                width: 75%;
+                height: fit-content;
+            }
+
+            .col-right{
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                height: fit-content
+            }
+        };
+    };
+};

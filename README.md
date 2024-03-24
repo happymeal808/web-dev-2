@@ -26,7 +26,17 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 1.  large tablet :point_right: desktop: ***800px*** or ***50em***
 
 
-## **IMPORTANT MESSAGE**  
-DO NOT TOUCH STYLES FOLDER, SCSS FOLDER ONLY
- > if your preview isn't updating, make sure sass is watching in terminal with 
- >> sass --watch scss:styles
+## **IMPORTANT MESSAGES**  
+:no_entry: :no_entry: DO NOT TOUCH STYLES FOLDER, SCSS FOLDER ONLY :no_entry: :no_entry: 
+
+---
+
+If your preview isn't updating, make sure sass is :eyes: in terminal with:
+
+`sass --watch scss:styles`
+    
+---
+
+all these deadlines got me like...
+
+![ded](https://media.tenor.com/76mDbn6CW7sAAAAM/dance-dance-party.gif)
