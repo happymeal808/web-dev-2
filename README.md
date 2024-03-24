@@ -9,13 +9,13 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Tyler
 (side-bar content)  
-* cuisines
 * latest recipes
 
 ### Simran 
 * recipe Gallery
 
 ### Gill
+* cuisines
 * blog posts
 * footer
 

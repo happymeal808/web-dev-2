@@ -1,1 +1,10 @@
 @use 'vars' as *;
+
+footer{
+    font-family: $nav-font;
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    color: $header-font-color;
+    background-color: $footer-background;
+    text-align: center;
+    padding: 0.25rem 1rem;
+}
