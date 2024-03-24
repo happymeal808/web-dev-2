@@ -331,4 +331,16 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-image: url("../images/bg.jpg");
+  background-repeat: repeat;
+}
+
+.blog-posts {
+  background-color: #f9f9f9;
+}
+.blog-posts h3 {
+  font-family: "Roboto Condensed", san-serif;
+}
+
 /*# sourceMappingURL=styles.css.map */
