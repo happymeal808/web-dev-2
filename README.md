@@ -6,7 +6,6 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Dilraj
 * header  
-* footer
 
 ### Tyler
 (side-bar content)  
@@ -18,8 +17,16 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Gill
 * blog posts
+* footer
 
-**IMPORTANT MESSAGE**  
+## Screen breakpoints:
+1.  small :point_right: large phone: ***336px*** or  ***21rem***
+1.  large phone :point_right: small tablet: ***496px*** or ***31em***
+1.  small tablet :point_right: large tablet: ***672px*** or ***42em***
+1.  large tablet :point_right: desktop: ***800px*** or ***50em***
+
+
+## **IMPORTANT MESSAGE**  
 DO NOT TOUCH STYLES FOLDER, SCSS FOLDER ONLY
  > if your preview isn't updating, make sure sass is watching in terminal with 
  >> sass --watch scss:styles
