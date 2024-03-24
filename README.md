@@ -4,14 +4,8 @@ brought to you by Dilraj, Gill, Simran, & Tyler.
 ## Group Tasks  
 start with mobile small, first!! will redistribute tasks once we have our base styled.
 
-### Dilraj
-* header  
-
-### Tyler
-(side-bar content)  
-* latest recipes
-
-### Simran 
+### Dilraj, Tyler, Simran 
+* header
 * recipe Gallery
 
 ### Gill
