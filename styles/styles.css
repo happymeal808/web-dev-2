@@ -332,15 +332,14 @@ html {
 }
 
 body {
-  background-image: url("../images/bg.jpg");
+  background-image: url(../images/bg.jpg);
   background-repeat: repeat;
 }
 
 .blog-posts {
-  background-color: #f9f9f9;
-}
-.blog-posts h3 {
-  font-family: "Roboto Condensed", san-serif;
+  background-color: #FFFFFF;
+  margin: 0 1rem;
+  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
