@@ -28,7 +28,7 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ---
 
-If your preview isn't updating, make sure sass is :eyes: in terminal with:
+If your preview isn't updating, make sure sass is 👀 watching :eyes: in terminal with:
 
 `sass --watch scss:styles`
     
