@@ -5,13 +5,16 @@ brought to you by Dilraj, Gill, Simran, & Tyler.
 start with mobile small, first!! will redistribute tasks once we have our base styled.
 
 ### Dilraj, Tyler, Simran 
-* header
-* recipe Gallery
+- [ ] header
+- [ ] recipe Gallery
 
 ### Gill
-* cuisines
-* blog posts
-* footer
+- [x] cuisines
+- [x] blog posts
+- [x] footer
+
+### Group
+- [ ] responsive breakpoints layout
 
 ## Screen breakpoints:
 1.  small :point_right: large phone: ***336px*** or  ***21rem***
