@@ -360,10 +360,12 @@ header {
 }
 header .banner img {
   height: 30px;
+
 }
 header h1 {
   display: none;
 }
+
 
 nav {
   width: 100%;
@@ -465,6 +467,7 @@ nav a:hover, nav a:active, nav a:focus {
 .btn-menu.show .bar:after {
   top: 0;
   transform: rotate(-45deg);
+
 }
 
 footer {
