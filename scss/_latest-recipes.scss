@@ -33,3 +33,10 @@
         background-color: $odd-child-background;
     };
 }
+
+// DESKTOP
+@media (min-width:50em){
+    .latest-recipes{
+        margin: 0 0.75rem 0 0 ;
+    }
+}
