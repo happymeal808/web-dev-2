@@ -1,1 +1,57 @@
 @use 'vars' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $nav-font;
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    color: $header-font-color;
+    background-color: $header-background;
+    text-align: center;
+    padding: 0.25rem 1rem;
+  }
+  
+  h1{
+    display: none;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  .banner {
+    flex: 1;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar {
+    margin-top: 20px; 
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background-color: $footer-background;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-family: $nav-font;
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    color: $header-font-color;
+    text-align: center;
+    padding: 0.25rem 1rem; 
+  }
+
+ 
