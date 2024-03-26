@@ -18,7 +18,35 @@
                             (max-width: 800px) calc(100vw - 60px),
                             740px">
         </div>
+        <!-- Hamburger Button -->
+        <button class="btn-menu" id="btn-menu">
+            <span class="button-content">
+                <span class="text">Menu</span>
+                <span class="bar"></span>
+            </span>
+        </button>
+</header>
 
+    <!-- Everything inside the hamburger menu -->
+
+    <nav id="main-navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <form>
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><img src="images/search.png" alt="Search Icon"></button>
+            </form>
+        </div>
+
+        <!-- Social media icon links -->
         <div class="social-links">
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -33,23 +61,8 @@
             </a>
         </div>
 
-        <div class="search-bar">
-            <form>
-                <input type="text" placeholder="Search" name="search">
-                <button type="submit"><img src="images/search.png" alt="Search Icon"></button>
-            </form>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
+    <!-- END OF HEADER/NAV -->
 
     <main class="site-main">
         <section class="recipe-gallery col-left">
@@ -137,5 +150,6 @@
         <p> &copy; 2013 Site designed by Michael Lee. For educational purpose only. Image Credits</p>
     </footer>
     
+    <script src="scripts/script.js"></script>
 </body>
 </html>
