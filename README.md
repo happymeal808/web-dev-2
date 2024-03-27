@@ -37,4 +37,4 @@ If your preview isn't updating, make sure sass is 👀 watching :eyes: in termin
 
 all these deadlines got me like...
 
-![ded](https://media.tenor.com/76mDbn6CW7sAAAAM/dance-dance-party.gif)
+![ded](https://www.animenewsnetwork.com/hotlink/thumbnails/crop1200x630gGD/cms/this-week-in-anime/135162/a3.png.jpg)
