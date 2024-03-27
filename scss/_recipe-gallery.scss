@@ -55,13 +55,74 @@
             padding: 0.75rem;
         }
     }
-    
 }
+
+// lARGE PHONES
+@media (min-width:21em){
+    .recipe-gallery{
+        .recipe-1,
+        .recipe-2,
+        .recipe-3{
+            img{
+                aspect-ratio: 2 / 1;
+            }
+        }
+    };
+}
+// SMALL TABS
+@media (min-width:31em){
+    .recipe-gallery{
+    
+        .recipe-1,
+        .recipe-2,
+        .recipe-3{
+            img{
+                aspect-ratio: 2.5 / 1;
+            }
+        }
+    };
+};
+
+// LARGE TABS
+@media (min-width:42em){
+    .recipe-gallery{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .recipe-1 {
+            width: 100%;
+            img{
+                aspect-ratio: 2.5 / 1;
+            }
+        }
+        .recipe-2{
+            padding-right: 0.125rem;
+            
+            figcaption{
+                margin-right: 0.125rem;
+            }
+        }
+        .recipe-3{
+            padding-left: 0.125rem;
+            figcaption{
+                margin-left: 0.125rem;
+            }
+        }
+
+        .recipe-2,
+        .recipe-3 {
+            width: 50%;
+            img{
+                aspect-ratio: 1 / 0.75;
+            }
+        }
+    };
+};
 
 @media (min-width:50em){
     .recipe-gallery{
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 0;
         
     }
 }
