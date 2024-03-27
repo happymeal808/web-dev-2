@@ -548,25 +548,20 @@ body {
 @media (min-width: 50em) {
   body .site-main {
     max-width: 64em;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0.75rem auto;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
   }
-  body .site-main .col-left {
-    max-width: 75%;
-    height: fit-content;
-    padding: 0;
-    float: left;
-    margin-top: 1rem;
+  body .site-main .main-content {
+    width: 75%;
   }
   body .site-main .col-right {
-    display: flex;
-    flex-direction: column;
+    width: 25%;
     float: right;
-    max-width: 25%;
-    height: fit-content;
-    padding: 0;
-    margin-top: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 .recipe-gallery {
