@@ -5,7 +5,7 @@ brought to you by Dilraj, Gill, Simran, & Tyler.
 start with mobile small, first!! will redistribute tasks once we have our base styled.
 
 ### Dilraj, Tyler, Simran 
-- [ ] header
+- [ ] header (partly done slowly workking on it-Dilraj)
 - [ ] recipe Gallery
 
 ### Gill
