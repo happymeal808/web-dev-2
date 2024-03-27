@@ -6,7 +6,7 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Dilraj, Tyler, Simran 
 - [ ] header (partly done slowly workking on it-Dilraj)
-- [x] recipe Gallery
+- [ ] recipe Gallery
 
 ### Gill
 - [x] cuisines
