@@ -15,6 +15,7 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Group
 - [ ] responsive breakpoints layout
+- [x] main content breakpoints done! whoop!
 
 ## Screen breakpoints:
 1.  small :point_right: large phone: ***336px*** or  ***21rem***
