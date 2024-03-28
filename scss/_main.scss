@@ -4,6 +4,21 @@ body{
     background-image: url(../images/bg.jpg);
     background-repeat: repeat;
     background-position: top;
+    
+    .site-main{
+        font-family: $body-font;
+        font-weight: 300;
+        
+        h2{
+            font-family: $heading-font;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0;
+            padding:0.5rem;
+            background-color: $footer-background;
+            color: $header-font-color;
+        }
+    }
 }
 
 // DESKTOP
@@ -11,27 +26,40 @@ body{
     body{
         .site-main{
             max-width: 64em;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
+            margin: 0.75rem auto;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
 
-            .col-left{
-                max-width: 75%;
-                height: fit-content;
-                padding: 0;
-                float: left;
-                margin-top: 1rem
-            };
 
+            .main-content{
+                width: 75%;
+            }
             .col-right{
-                display: flex;
-                flex-direction: column;
-                float: right;
-                max-width: 25%;
-                height: fit-content;
-                padding: 0;
-                margin-top:1rem; 
-            };
+                width: 25%;
+                float:right;
+                position: absolute;
+                top:0;
+                right: 0;
+            }
+
+            // .col-left{
+            //     max-width: 75%;
+            //     height: fit-content;
+            //     padding: 0;
+            //     float: left;
+            //     margin-top: 1rem;
+            // };
+
+            // .col-right{
+            //     display: flex;
+            //     flex-direction: column;
+            //     float: right;
+            //     max-width: 25%;
+            //     height: fit-content;
+            //     padding: 0;
+            //     margin-top:1rem; 
+            // };
         };
     };
 };

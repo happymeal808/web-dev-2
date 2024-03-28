@@ -6,7 +6,7 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Dilraj, Tyler, Simran 
 - [ ] header (partly done slowly workking on it-Dilraj)
-- [ ] recipe Gallery
+- [x] recipe Gallery
 
 ### Gill
 - [x] cuisines
@@ -15,6 +15,7 @@ start with mobile small, first!! will redistribute tasks once we have our base s
 
 ### Group
 - [ ] responsive breakpoints layout
+- [x] main content breakpoints done! whoop!
 
 ## Screen breakpoints:
 1.  small :point_right: large phone: ***336px*** or  ***21rem***
@@ -36,4 +37,4 @@ If your preview isn't updating, make sure sass is 👀 watching :eyes: in termin
 
 all these deadlines got me like...
 
-![ded](https://media.tenor.com/76mDbn6CW7sAAAAM/dance-dance-party.gif)
+![ded](https://www.animenewsnetwork.com/hotlink/thumbnails/crop1200x630gGD/cms/this-week-in-anime/135162/a3.png.jpg)
