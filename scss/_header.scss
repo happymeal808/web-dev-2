@@ -1,318 +1,277 @@
 @use 'vars' as *;
 
 // Box Sizing Reset
-html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  // Images - Max-Width Reset
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 
 
-  h1, h2, h3, h4, h5, nav a {
-    font-family: $nav-font;
-  }
-  
-  
-  header {
-    background-color: $heading-1-background;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background-color: $header-background;
+  color: white;
+  padding: 0.25rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
-    .banner img {
-        height: 30px;
-    }
-  
-    h1 {
-      display: none;
-    }
-  }
-
-  // Hamburger Styles
-.btn-menu {
-  display: none;
-}
-@media (max-width: 496px) {
-  .btn-menu {
-
-    margin: 0 20px 20px 0;
-    display: block;
-    width: 40px;
-    background-color: transparent;
-    border: none;
+  h1 {
+    font-size: 0;
     padding: 0;
-  
-    .button-content {
-      display: block;
-      height: 24px;
-      cursor: pointer;
-    }
-  
-    .text {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-  
-    .bar {
-      display: block;
-      height: 4px;
-      background-color: $heading-2-background;
-      width: 100%;
-      position: relative;
-      top: 10px;
-      transition: all 0.3s ease-in-out;
-      border-radius: 2px;
-  
-      &:before, &:after {
-        content: "";
+    margin: 0;
+    position: absolute;
+    top:-100
+  }
+
+  .page-logo{
+    height: 3rem;
+    margin:0.25rem 0 0.5rem 1rem;
+    
+  }
+  .main-navigation{
+    .search-bar{
+      background-color: #d8d8d8;
+      border: 1px solid grey;
+      border-radius: 1px;
+
+      form{
         width: 100%;
-        height: 4px;
-        background-color: $heading-2-background;
-        position: absolute;
-        transition: all 0.3s ease-in-out;
-        border-radius: 2px;
-      }
-  
-      &:before {
-        top: 10px;
-        left: 0;
-      }
-  
-      &:after {
-        top: -10px;
-        left: 0;
+        height: 2.5rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input{
+          font-family: $nav-font;
+          font-size: 1rem;
+          margin-left: 0.5rem;
+          background-color: transparent;
+          border: none;
+          height: 100%;
+          width: 100%;
+        }
+        button{
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+
+          img{
+            height: 1.5rem;
+            padding: 0;
+          margin: 0;
+          }
+        }
       }
     }
-  
-    &:focus {
-      outline: none;
-  
-      .button-content {
-        outline: 5px solid #7683C9;
+    .social-links{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: $header-background;
+      border: 1px solid grey;
+      a{
+        padding: 0.25rem;
+        text-align: center;
+        height: 2.5rem;
+        transform: translateY(0px);
+        border-top:none;
+        svg {
+          fill: $navbar-background;
+          
+        }
       }
-    }
-  
-    &.show {
-      .bar {
-        background-color: transparent;	
-  
-        &:before {
-          top: 0;
-          transform: rotate(45deg);	
-        }
-  
-        &:after {
-          top: 0;
-          transform: rotate(-45deg);	
-        }
+      a:hover {
+        transform: translateY(calc(40px - 100%));
+        transition-duration: 0.5s;
       }
     }
   }
+}
+/* Responsive Menus */
+/* Dropdown Menu */
+nav {
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: $navbar-background;   
+}
 
+nav.activated {
+  transition: height 0.3s ease, visibility 0s ;
+}
 
-  // Responsive Menus
-  // Dropdown Menu
+.show nav {
+  transition: height 0.3s ease, visibility 0s;
+  visibility: visible;
+  height: 18.375rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+  font-family: $nav-font;
+  padding: 0;
+  font-size: 1.2em;
+  display: block;
+  border-right: none;
+  color: white;
+  border-bottom: none;
+  border-top: 2px solid #8A95d0;
+  line-height: 2.5rem;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  outline: none;
+  color: $footer-background;
+  background-color: $section-background;
+  transition: 0.5s ease-in-out;
+   
+}
+
+/* Hamburger Styles */
+.btn-menu {
+  margin: 1rem 1rem 1rem 0;
+  display: block;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+}
+
+.btn-menu .button-content {
+  display: block;
+  height: 24px;
+  cursor: pointer;
+}
+
+.btn-menu .text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.btn-menu .bar {
+  display: block;
+  height: 4px;
+  background-color: $button-hover;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-menu .bar:before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: 10px;
+  left: 0;
+  background-color: $button-hover;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-menu .bar:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: -10px;
+  left: 0;
+  background-color: $button-hover;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-menu:focus {
+  outline: none;
+}
+
+.btn-menu:focus .button-content {
+  outline: 5px solid #7683C9;
+}
+// lARGE PHONES
+@media (min-width:21em){
+  header {
+    .page-logo{
+      max-height:35px;
+      max-width: 70%;
+    }
+  }
+};
+// SMALL TABS
+@media (min-width:31em){
+  header {
+    display: flex;
+  }
+
+  .btn-menu {
+      display: none;
+  }
 
   nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-    background-color: $navbar-background; 
-    display: block;
-  
-    &.activated {
-      transition: height 0.3s ease, visibility 0s 0.3s;
-    }
-  
-    &.show {
-      transition: height 0.3s ease, visibility 0s;
+      background-color: $button-hover;
       visibility: visible;
       height: auto;
-    }
-  
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-  
-    a { text-decoration: none;
-        padding: 0 20px;
-        font-size: 1.2em;
-        display: block;
-        color: $header-font-color;
-        line-height: 30px;
-        text-align: center;
-        border-top: 2px solid $button-hover;
-        border-left: 2px solid $button-hover;
-        border-right: 2px solid $button-hover;
-    
-        &:first-child {
-          border-top: none;
-        }
-    
-        &:last-child {
-          border-bottom: 2px solid $button-hover;
-
-          border-left: 2px solid $button-hover;
-
-          border-right: 2px solid $button-hover;
-        }
-  
-      &:hover,
-      &:active,
-      &:focus {
-        outline: none;
-        background-color: bls(255,255,255, 0.3);
+      background-color: $nav-bar-tablet;
+      .social-links a {
+        display: none;
       }
-    }
-  }
-  
-  .search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-  
-    form {
-      width: 100%;
-      max-width: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-  
-      input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-      }
-  
-      button {
-        position: absolute;
-        right: 10px;
-        width: 20%;
-        padding: 10px;
-        border: none;
-        color: white;
-        border-radius: 5px;
-        background-color: transparent;
-        cursor: pointer;
+      ul {
+        display: flex;
+        margin: 0 0.75rem;
+        background-color: $navbar-background;
+        li {
+          flex: 1;
+          a {
+            color: black;
+            text-decoration: none;
+            border-top: none;
+            line-height: 42px;
+            text-align: center;
+            color: #E3E3E3;
+        }
+        li:last-child a {
+          border-right: none;
+        }
       }
     }
   }
 
-//   Social Links
-  .social-links {
-    background-color: $section-background;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    a {
-      display: inline-block;
-      fill: $heading-2-background;
-      padding: 0 10px;
-      border: none;
-    }
+  nav a:hover,
+  nav a:active,
+  nav a:focus {
+      background-color: #E3E3E3;
+      outline: none;
   }
 }
-@media (min-width: 496px) {
-  .social-links {
-    display: none;
-  }
-  @media (min-width: 672px){
-    .social-links {
-      background-color: $section-background;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    
-      a {
-        display: inline-block;
-        fill: $heading-2-background;
-        padding: 0 10px;
-        border: none;
+// LARGE TABS
+@media (min-width:42em){
+        
+};
+
+// DESKTOP
+@media (min-width:50em){
+   header {
+    max-width: 100%;
+    nav{
+      
+      .page-links{
+        max-width: 64rem;
+        margin:0 auto;
       }
     }
-  }
-    header {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: left;
-      font-family: $nav-font;
-      font-size: clamp(1rem, 2vw, 1.75rem);
-      color: $header-font-color;
-      background-color: $header-background;
-      text-align: left;
-      padding: 0.25rem 1rem;
-    }
-      
-    h1 {
-      display: block;
-      margin: 0;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .banner {
-      flex: 1;
-    }  
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      background-color: $footer-background;
-      justify-content: flex-start;
-      align-content: center;
-      height: 2rem;
-    }
-    
-    nav ul li {
-      display: inline-block;
-      text-align: center;
-      padding: 0.5rem;
-    }
-    
-    nav ul li a {
-      text-decoration: none;
-      font-family: $nav-font;
-      font-size: clamp(1rem, 2vw, 1.75rem);
-      color: $header-font-color;
-      text-align: center;
-      padding: 0.25rem 1rem; 
-    }
-    @media (min-width: 800px){
-    }
+   }
 }
