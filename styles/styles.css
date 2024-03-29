@@ -379,7 +379,7 @@ header .main-navigation .search-bar form button {
   cursor: pointer;
 }
 header .main-navigation .search-bar form button img {
-  height: 1.5rem;
+  max-height: 1.5rem;
   padding: 0;
   margin: 0;
 }
@@ -400,7 +400,9 @@ header .main-navigation .social-links a {
 header .main-navigation .social-links a svg {
   fill: #466fa4;
 }
-header .main-navigation .social-links a:hover {
+header .main-navigation .social-links a:hover,
+header .main-navigation .social-links a:active,
+header .main-navigation .social-links a:focus {
   transform: translateY(calc(40px - 100%));
   transition-duration: 0.5s;
 }
@@ -443,6 +445,7 @@ nav a {
   border-bottom: none;
   border-top: 2px solid #8A95d0;
   line-height: 2.5rem;
+  transition: 0.3s ease-in-out;
 }
 
 nav a:hover,
@@ -451,7 +454,7 @@ nav a:focus {
   outline: none;
   color: #466fa4;
   background-color: #FFFFFF;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* Hamburger Styles */
@@ -488,7 +491,6 @@ nav a:focus {
   width: 100%;
   position: relative;
   top: 10px;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn-menu .bar:before {
@@ -545,6 +547,13 @@ nav a:focus {
     height: auto;
     background-color: #365a8e;
   }
+  header .main-navigation a:hover,
+  header .main-navigation a:active,
+  header .main-navigation a:focus {
+    background-color: #E3E3E3;
+    outline: none;
+    color: #2a5da0;
+  }
   header .main-navigation .search-bar {
     width: 15rem;
     position: absolute;
@@ -560,8 +569,8 @@ nav a:focus {
     align-items: center;
   }
   header .main-navigation .search-bar form button img {
-    height: 1.5rem;
-    width: 1.5rem;
+    max-height: 1.5rem;
+    max-width: 1.5rem;
   }
   header .main-navigation .social-links a {
     display: none;
@@ -585,12 +594,6 @@ nav a:focus {
   header .main-navigation ul li li:last-child a {
     border-right: none;
   }
-  nav a:hover,
-  nav a:active,
-  nav a:focus {
-    background-color: #E3E3E3;
-    outline: none;
-  }
 }
 @media (min-width: 42em) {
   header .main-navigation .social-links {
@@ -604,13 +607,38 @@ nav a:focus {
   }
 }
 @media (min-width: 50em) {
-  header {
+  .header-wrapper {
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  .header-wrapper .header-bottom {
+    background-color: #365a8e;
+    height: 2.625rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .header-wrapper header {
     max-width: 64rem;
     margin: 0 auto;
   }
-  header .main-navigation .page-links {
+  .header-wrapper header .main-navigation .search-bar {
+    position: absolute;
+    top: 3.95rem;
+    width: 30%;
+    right: 0.75rem;
+    border-radius: 0;
+  }
+  .header-wrapper header .main-navigation .social-links {
+    right: 0.75rem;
+  }
+  .header-wrapper header .main-navigation .page-links {
     max-width: 64rem;
     margin: 0 auto;
+  }
+  .header-wrapper header .main-navigation .page-links ul {
+    width: 68%;
   }
 }
 footer {
@@ -820,6 +848,13 @@ body .site-main h2 {
   color: black;
   text-decoration: none;
   line-height: 1.75;
+  transition: 0.3s ease-in-out;
+}
+.cuisines .list-wrap ul li a:hover,
+.cuisines .list-wrap ul li a:active,
+.cuisines .list-wrap ul li a:focus {
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
 
 @media (min-width: 31em) {
@@ -877,6 +912,7 @@ body .site-main h2 {
 }
 .blog-posts article .read-more-btn .read-more {
   border: none;
+  border-radius: 1px;
   text-transform: uppercase;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   padding: 0.5rem;
@@ -884,14 +920,14 @@ body .site-main h2 {
   font-weight: 600;
   color: #FFFFFF;
   background-color: #466fa4;
+  transition: 0.3s ease-in-out;
 }
-.blog-posts article .read-more-btn .read-more:hover {
-  background-color: #2a5da0;
-  cursor: grab;
-}
+.blog-posts article .read-more-btn .read-more:hover,
 .blog-posts article .read-more-btn .read-more:active,
 .blog-posts article .read-more-btn .read-more:focus {
-  border: 0.5px dashed gray;
+  background-color: #2a5da0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .blog-posts h2 {
   font-size: 0;

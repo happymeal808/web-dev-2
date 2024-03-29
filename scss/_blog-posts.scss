@@ -30,6 +30,7 @@
         
             .read-more{
                 border:none;
+                border-radius: 1px;
                 text-transform: uppercase;
                 font-size: clamp(1.25rem, 2.5vw, 1.5rem);
                 padding: 0.5rem;
@@ -37,15 +38,16 @@
                 font-weight: 600;
                 color: $header-font-color;
                 background-color: $footer-background;
+                transition: 0.3s ease-in-out
             };
-            .read-more:hover{
-                background-color: $button-hover;
-                cursor: grab;
-            };
+            .read-more:hover,
             .read-more:active,
             .read-more:focus{
-                border: 0.5px dashed gray;
-            }
+                background-color: $button-hover;
+                cursor: pointer;
+                transition: 0.3s ease-in-out
+            };
+
         }
     };
 
