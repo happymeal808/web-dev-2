@@ -530,28 +530,51 @@ nav a:focus {
 @media (min-width: 31em) {
   header {
     display: flex;
+    position: relative;
   }
-  .btn-menu {
+  header .page-logo {
+    margin: 0.75rem;
+    max-width: 40%;
+  }
+  header .btn-menu {
     display: none;
   }
-  nav {
+  header .main-navigation {
     background-color: #2a5da0;
     visibility: visible;
     height: auto;
     background-color: #365a8e;
   }
-  nav .social-links a {
+  header .main-navigation .search-bar {
+    width: 15rem;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border-radius: 0.5rem;
+  }
+  header .main-navigation .search-bar form {
+    height: 2.5rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .main-navigation .search-bar form button img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  header .main-navigation .social-links a {
     display: none;
   }
-  nav ul {
+  header .main-navigation ul {
     display: flex;
     margin: 0 0.75rem;
     background-color: #466fa4;
   }
-  nav ul li {
+  header .main-navigation ul li {
     flex: 1;
   }
-  nav ul li a {
+  header .main-navigation ul li a {
     color: black;
     text-decoration: none;
     border-top: none;
@@ -559,7 +582,7 @@ nav a:focus {
     text-align: center;
     color: #E3E3E3;
   }
-  nav ul li li:last-child a {
+  header .main-navigation ul li li:last-child a {
     border-right: none;
   }
   nav a:hover,
@@ -569,11 +592,23 @@ nav a:focus {
     outline: none;
   }
 }
+@media (min-width: 42em) {
+  header .main-navigation .social-links {
+    position: absolute;
+    top: 1rem;
+    right: 18rem;
+    border: none;
+  }
+  header .main-navigation .social-links a {
+    display: block;
+  }
+}
 @media (min-width: 50em) {
   header {
-    max-width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
   }
-  header nav .page-links {
+  header .main-navigation .page-links {
     max-width: 64rem;
     margin: 0 auto;
   }
