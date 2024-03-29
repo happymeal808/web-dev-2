@@ -848,6 +848,13 @@ body .site-main h2 {
   color: black;
   text-decoration: none;
   line-height: 1.75;
+  transition: 0.3s ease-in-out;
+}
+.cuisines .list-wrap ul li a:hover,
+.cuisines .list-wrap ul li a:active,
+.cuisines .list-wrap ul li a:focus {
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
 
 @media (min-width: 31em) {
@@ -905,6 +912,7 @@ body .site-main h2 {
 }
 .blog-posts article .read-more-btn .read-more {
   border: none;
+  border-radius: 1px;
   text-transform: uppercase;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   padding: 0.5rem;
@@ -912,14 +920,14 @@ body .site-main h2 {
   font-weight: 600;
   color: #FFFFFF;
   background-color: #466fa4;
+  transition: 0.3s ease-in-out;
 }
-.blog-posts article .read-more-btn .read-more:hover {
-  background-color: #2a5da0;
-  cursor: grab;
-}
+.blog-posts article .read-more-btn .read-more:hover,
 .blog-posts article .read-more-btn .read-more:active,
 .blog-posts article .read-more-btn .read-more:focus {
-  border: 0.5px dashed gray;
+  background-color: #2a5da0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .blog-posts h2 {
   font-size: 0;
