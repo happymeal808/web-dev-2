@@ -24,7 +24,12 @@
                     text-decoration: none;
                     line-height: 1.75;
                 }
-            
+
+                a:hover,
+                a:active,
+                a:focus {
+                    font-weight: 600;
+                }
             }
         }
     }
