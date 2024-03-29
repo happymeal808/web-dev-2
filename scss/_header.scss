@@ -215,17 +215,47 @@ nav a:focus {
 @media (min-width:31em){
   header {
     display: flex;
-  }
+    position: relative;
+  
+    .page-logo{
+      margin:0.75rem;
+      max-width: 40%;
+    }
 
   .btn-menu {
       display: none;
   }
 
-  nav {
-      background-color: $button-hover;
-      visibility: visible;
-      height: auto;
-      background-color: $nav-bar-tablet;
+  .main-navigation {
+    background-color: $button-hover;
+    visibility: visible;
+    height: auto;
+    background-color: $nav-bar-tablet;
+    
+
+      .search-bar{
+        width: 15rem;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        border-radius: 0.5rem;
+
+        form {
+          height: 2.5rem;
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          button{
+            img{
+              height: 1.5rem;
+              width:1.5rem;
+            }
+          }
+          
+        }
+      }
+
       .social-links a {
         display: none;
       }
@@ -249,6 +279,7 @@ nav a:focus {
       }
     }
   }
+}
 
   nav a:hover,
   nav a:active,
@@ -259,15 +290,28 @@ nav a:focus {
 }
 // LARGE TABS
 @media (min-width:42em){
-        
+        header {
+          .main-navigation{
+            .social-links{
+              position: absolute;
+              top: 1rem;
+              right: 18rem;
+              border: none;
+              a{
+                display: block;
+                
+              }
+            }
+          }
+        }
 };
 
 // DESKTOP
 @media (min-width:50em){
    header {
-    max-width: 100%;
-    nav{
-      
+    max-width: 64rem;
+    margin: 0 auto;
+    .main-navigation{
       .page-links{
         max-width: 64rem;
         margin:0 auto;
