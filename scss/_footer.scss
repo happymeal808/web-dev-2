@@ -2,9 +2,22 @@
 
 footer{
     font-family: $nav-font;
-    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     color: $header-font-color;
     background-color: $footer-background;
     text-align: center;
     padding: 0.25rem 1rem;
+
+    p{
+        margin: 0.25rem;
+    }
 }
+
+// SMALL TABS
+@media (min-width:31em){
+    footer{
+        p{
+            margin:0.5rem;
+        }
+    }
+};
