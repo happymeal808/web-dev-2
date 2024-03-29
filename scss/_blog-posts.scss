@@ -76,13 +76,11 @@
         padding: 0.5rem;
         margin: 1rem auto 2rem 0.5rem ;
     };
-    .older-posts:hover{
-        cursor: grab;
-    };
+    .older-posts:hover,
     .older-posts:active,
     .older-posts:focus{
-        border: 0.5px dashed gray;
-    }
+        cursor: grab;
+    };
 };
 // lARGE PHONES
 @media (min-width:21em){

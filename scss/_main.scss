@@ -18,6 +18,14 @@ body{
             background-color: $footer-background;
             color: $header-font-color;
         }
+
+        a:focus{
+            border: 0.5px dotted lightblue;
+        }
+
+        button:focus{
+            border: 0.5px dotted lightblue;
+        }
     }
 }
 

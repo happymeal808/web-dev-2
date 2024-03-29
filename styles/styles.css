@@ -353,8 +353,8 @@ header .page-logo {
 }
 header .main-navigation .search-bar {
   background-color: #d8d8d8;
-  border: 1px solid grey;
   border-radius: 1px;
+  box-shadow: inset 0 0 0.375rem 0.125rem rgb(167, 167, 167);
 }
 header .main-navigation .search-bar form {
   width: 100%;
@@ -387,24 +387,12 @@ header .main-navigation .social-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   background-color: #f9f9f9;
   border: 1px solid grey;
-}
-header .main-navigation .social-links a {
-  padding: 0.25rem;
-  text-align: center;
-  height: 2.5rem;
-  transform: translateY(0px);
-  border-top: none;
-}
-header .main-navigation .social-links a svg {
-  fill: #466fa4;
-}
-header .main-navigation .social-links a:hover,
-header .main-navigation .social-links a:active,
-header .main-navigation .social-links a:focus {
-  transform: translateY(calc(40px - 100%));
-  transition-duration: 0.5s;
+  height: 2rem;
+  overflow: visible;
+  position: relative;
 }
 
 /* Responsive Menus */
@@ -424,7 +412,7 @@ nav.activated {
 .show nav {
   transition: height 0.3s ease, visibility 0s;
   visibility: visible;
-  height: 18.375rem;
+  height: 17.625rem;
 }
 
 nav ul {
@@ -559,10 +547,10 @@ nav a:focus {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
   }
   header .main-navigation .search-bar form {
-    height: 2.5rem;
+    height: 2.625rem;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -572,8 +560,12 @@ nav a:focus {
     max-height: 1.5rem;
     max-width: 1.5rem;
   }
+  header .main-navigation .social-links {
+    height: 0;
+    overflow: hidden;
+  }
   header .main-navigation .social-links a {
-    display: none;
+    height: 0;
   }
   header .main-navigation ul {
     display: flex;
@@ -596,14 +588,29 @@ nav a:focus {
   }
 }
 @media (min-width: 42em) {
+  header .main-navigation .search-bar {
+    right: 7rem;
+  }
   header .main-navigation .social-links {
     position: absolute;
-    top: 1rem;
-    right: 18rem;
+    top: 1.25rem;
+    right: 0.75rem;
     border: none;
+    overflow: visible;
   }
   header .main-navigation .social-links a {
     display: block;
+    border-top: none;
+  }
+  header .main-navigation .social-links a span {
+    margin: 0;
+  }
+  header .main-navigation .social-links a span .default-icon {
+    fill: #2a5da0;
+  }
+  header .main-navigation .social-links a span .hover-icon {
+    height: 0;
+    width: 0;
   }
 }
 @media (min-width: 50em) {
@@ -641,6 +648,54 @@ nav a:focus {
     width: 68%;
   }
 }
+@media (max-width: 42em) {
+  .social-links .fb-icon {
+    padding-bottom: 0.125rem;
+  }
+  .social-links .fb-icon .hover-icon {
+    margin-top: 0.125rem;
+  }
+  .social-links a {
+    padding-bottom: 0 0.25rem 0.25rem 0.25rem;
+    display: inline;
+    height: 1.75rem;
+    border-top: none;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+  }
+  .social-links .default-icon {
+    margin-bottom: 0.25rem;
+    fill: #466fa4;
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+  }
+  .social-links a:hover .default-icon {
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-out;
+  }
+  .social-links .hover-icon {
+    fill: gray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(110%);
+    transition: transform 0.2s ease-out;
+  }
+  .social-links .hover-icon:nth-child(even) {
+    margin-bottom: 0.25rem;
+  }
+  .social-links a:hover .hover-icon {
+    transform: none;
+    transition: transform 0.2s ease-out;
+    background-color: transparent;
+  }
+}
 footer {
   font-family: "Roboto Condensed", san-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
@@ -675,6 +730,12 @@ body .site-main h2 {
   padding: 0.5rem;
   background-color: #466fa4;
   color: #FFFFFF;
+}
+body .site-main a:focus {
+  border: 0.5px dotted lightblue;
+}
+body .site-main button:focus {
+  border: 0.5px dotted lightblue;
 }
 
 @media (min-width: 50em) {
@@ -848,13 +909,11 @@ body .site-main h2 {
   color: black;
   text-decoration: none;
   line-height: 1.75;
-  transition: 0.3s ease-in-out;
 }
 .cuisines .list-wrap ul li a:hover,
 .cuisines .list-wrap ul li a:active,
 .cuisines .list-wrap ul li a:focus {
   font-weight: 600;
-  transition: 0.3s ease-in-out;
 }
 
 @media (min-width: 31em) {
@@ -952,12 +1011,10 @@ body .site-main h2 {
   padding: 0.5rem;
   margin: 1rem auto 2rem 0.5rem;
 }
-.blog-posts .older-posts:hover {
-  cursor: grab;
-}
+.blog-posts .older-posts:hover,
 .blog-posts .older-posts:active,
 .blog-posts .older-posts:focus {
-  border: 0.5px dashed gray;
+  cursor: grab;
 }
 
 @media (min-width: 42em) {
