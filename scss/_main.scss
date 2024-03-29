@@ -4,6 +4,29 @@ body{
     background-image: url(../images/bg.jpg);
     background-repeat: repeat;
     background-position: top;
+    
+    .site-main{
+        font-family: $body-font;
+        font-weight: 300;
+        
+        h2{
+            font-family: $heading-font;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0;
+            padding:0.5rem;
+            background-color: $footer-background;
+            color: $header-font-color;
+        }
+
+        a:focus{
+            border: 0.5px dotted lightblue;
+        }
+
+        button:focus{
+            border: 0.5px dotted lightblue;
+        }
+    }
 }
 
 // DESKTOP
@@ -15,6 +38,7 @@ body{
             flex-direction: column;
             justify-content: space-around;
             position: relative;
+
 
             .main-content{
                 width: 75%;
