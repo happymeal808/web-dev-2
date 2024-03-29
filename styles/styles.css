@@ -513,6 +513,7 @@ nav a:focus {
 
 @media (min-width: 21em) {
   header .page-logo {
+    content: url(../images/logo.png);
     max-height: 35px;
     max-width: 70%;
   }
